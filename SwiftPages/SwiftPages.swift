@@ -169,7 +169,7 @@ public class SwiftPages: UIView {
                     barButton.setTitle(title, forState: .Normal)
                     barButton.setTitleColor(self.buttonsTextColor, forState: .Normal)
                     barButton.tag = index
-                    barButton.addTarget(self, action: "barButtonAction:", forControlEvents: .TouchUpInside)
+                    barButton.addTarget(self, action: #selector(SwiftPages.barButtonAction(_:)), forControlEvents: .TouchUpInside)                    
                     self.topBar.addSubview(barButton)
                     self.barButtons.append(barButton)
                     
