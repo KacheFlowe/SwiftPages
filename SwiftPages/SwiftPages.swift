@@ -152,8 +152,7 @@ public class SwiftPages: UIView {
                     barButton.imageView?.contentMode = .ScaleAspectFit
                     barButton.setImage(image, forState: .Normal)
                     barButton.tag = index
-                    barButton.addTarget(self, action: "barButtonAction:", forControlEvents: .TouchUpInside)
-                    self.topBar.addSubview(barButton)
+                    barButton.addTarget(self, action: #selector(SwiftPages.barButtonAction(_:)), forControlEvents: .TouchUpInside)                    
                     self.barButtons.append(barButton)
                     
                     buttonsXPosition += self.containerView.frame.size.width / CGFloat(self.viewControllerIDs.count)
